@@ -1,0 +1,73 @@
+<body style="background-color: rgb(99, 37, 126);height: 100%;">
+
+  <div class="container-fluid">
+
+    <div class="row ">
+      <div class="col-8">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+          class="img-fluid img-thumbnail p-1 mb-2" alt="Responsive image" width="100px" alt="logo"
+          style="background-color: transparent; border-color: transparent;">
+        <mat-card-title style="color:white">Jabonics</mat-card-title>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex justify-content-end p-3 mb-2">
+          <button type="button" class="btn btn-danger align items: center" [routerLink]="['/','portal']">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z" />
+              <path fill-rule="evenodd"
+                d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+            </svg>
+            Salir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="d-flex justify-content-center">
+        <div class="row vertical-center">
+          <div class="col p-md-2">
+            <img src="/assets/images/USUARIOS-ANIMADO.png" class="img-fluid img-thumbnail p-1 mb-4"
+              alt="Responsive image" width="400px">
+            <button class="btn btn-dark btn-lg col-12  border-radius=50" type="button"
+              [routerLink]="['../','usuarios']">Usuarios</button>
+          </div>
+          <div class="col p-md-2">
+            <img src="https://i.pinimg.com/564x/f9/b9/90/f9b990a7b49564ddb324f6bcf8ed97c4.jpg"
+              class="img-fluid img-thumbnail p-1 mb-4" alt="Responsive image" width="400px">
+            <button class="btn btn-dark btn-lg col-12  border-radius=50" type="button"
+              [routerLink]="['../','productos']">Productos</button>
+          </div>
+          <div class="col p-md-2">
+            <img
+              src="https://img.freepik.com/vector-premium/jabon-barra-botella-jabon-ilustracion-dibujos-animados-espuma_374761-33.jpg?w=740"
+              class="img-fluid img-thumbnail p-1 mb-4" alt="Responsive image" width="400px">
+            <button class="btn btn-dark btn-lg col-12  border-radius=50" type="button"
+              [routerLink]="['../','tipoProducto']">Tipo de productos</button>
+          </div>
+          <div class="col p-md-2">
+            <img src="https://i.pinimg.com/564x/cf/a4/94/cfa494534924d60266a80dec803dde2b.jpg"
+              class="img-fluid img-thumbnail p-1 mb-4" alt="Responsive image" width="400px ">
+            <button class="btn btn-dark btn-lg col-12  border-radius=50" type="button"
+              [routerLink]="['../','ventas']">Ventas</button>
+          </div>
+
+          <div class="col p-md-2">
+            <img src="https://i.pinimg.com/564x/ad/9e/7b/ad9e7bf59a5c909aa2c6a8c9a835f012.jpg"
+              class="img-fluid img-thumbnail p-1 mb-4" alt="Responsive image" width="400px ">
+            <button class="btn btn-dark btn-lg col-12  border-radius=50" type="button"
+              [routerLink]="['../','reportes']">Reportes</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>

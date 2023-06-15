@@ -1,0 +1,27 @@
+[
+    {
+        "CUsuario": 1,
+        "NUsuario": "Luis",
+        "TContrasena": "12345678"
+    },
+    {
+        "CUsuario": 2,
+        "NUsuario": "Carlos",
+        "TContrasena": "1234%678"
+    },
+    {
+        "CUsuario": 3,
+        "NUsuario": "Mike",
+        "TContrasena": "1234/&78"
+    },
+    {
+        "CUsuario": 4,
+        "NUsuario": "Alan",
+        "TContrasena": "123#5#78"
+    },
+    {
+        "CUsuario": 5,
+        "NUsuario": "Claudia",
+        "TContrasena": "1%3456$$"
+    }
+]

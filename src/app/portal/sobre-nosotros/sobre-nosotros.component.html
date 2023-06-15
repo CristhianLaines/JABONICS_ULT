@@ -1,0 +1,50 @@
+<body style="background-color:rgb(99, 37, 126);height: 100%;">
+    <div class="container-fluid">
+
+        <div class="row ">
+            <div class="col-8">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    class="img-fluid img-thumbnail p-1 mb-2" alt="Responsive image" width="100px" alt="logo"
+                    style="background-color: transparent; border-color: transparent;">
+                <mat-card-title style="color:white">Jabonics</mat-card-title>
+            </div>
+
+            <div class="col-4">
+                <div class="d-flex justify-content-end p-3 mb-2">
+                    <button type="button" class="btn btn-danger" [routerLink]="['/','portal']">Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="QS">
+        <div id="parallax">
+            <div data-depth="0.6" class="layer">
+                <div class="some-space">
+                    <h1 class="h1qs">¿Quienes Somos?</h1>
+                    <img class="imgqs"
+                        src="https://i.ibb.co/yQzZ3PF/FONDO-HOME.jpg"
+                        alt="" />
+                </div>
+            </div>
+
+            <div data-depth="0.3" class="layer">
+                <div class="some-more-space">
+                    <h2 class="h2qs">Panadería Tecleña fue fundada en el año 1965, en la ciudad de Santa Tecla, por una
+                        mujer de visión empresarial con enfoque social, quien a sus 39 años asume el reto de crear la
+                        panadería. En sus inicios su especialidad fue la elaboración del pan artesanal según las recetas
+                        de su creadora.
+
+                        Su nombre inicial fue Panadería Las Victorias, pero en el año 1987 surge como como: </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#parallax').parallax({
+            invertX: true,
+            invertY: true,
+            scalarX: 10,
+            frictionY: .1
+        });
+    </script>
+</body>

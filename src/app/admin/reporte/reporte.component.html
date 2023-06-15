@@ -1,0 +1,55 @@
+<body class="vertical-center_1" style="background-color: rgb(99, 37, 126); height:auto;">
+
+  <div class="container-fluid">
+
+    <div class="row ">
+      <div class="col-8">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+          class="img-fluid img-thumbnail p-1 mb-2" alt="Responsive image" width="100px" alt="logo"
+          style="background-color: transparent; border-color: transparent;">
+        <mat-card-title style="color:white">Jabonics</mat-card-title>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex justify-content-end p-3 mb-2">
+          <button type="button" class="btn btn-danger" [routerLink]="['/','admin']">Volver</button>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-sm ">
+    <div class="row">
+      <div class="col-sm">
+        <div class="vertical-center_1" style="display: flex; justify-content: center;">
+
+          <div class="p-3 mb-2"
+            style="display: flex; justify-content: center; background-color: #c0a0c3; border-radius: 20px;">
+            <div style="width: 600px;">
+              <h1>Reporte Ventas</h1>
+              <div class="justify-content-center p-md-2">
+                <label for="cmbAnno">Año</label>
+                <mat-select [(ngModel)]="annoSelected" (ngModelChange)="onChangeAnno()" id="cmbAnno"
+                  placeholder="Seleccione">
+                  <mat-option *ngFor="let anno of annoList" [value]="anno.value">
+                    {{anno.text}}
+                  </mat-option>
+                </mat-select>
+                <div style="color: red;" *ngIf="!annoSelected" class="error-message">Debes seleccionar un año</div>
+              </div>
+              <div class="justify-content-center p-md-2">
+                <label for="txtVentaTotal">Venta Total:</label>
+                <input type="text" id="txtVentaTotal" style="background-color: transparent; border-color: transparent;"
+                  [value]="totalVentasPorAnno" readonly />
+
+                <label for="txtMesMayorVenta">Mes mayor venta:</label>
+                <input type="text" id="txtMesMayorVenta"
+                  style="background-color: transparent; border-color: transparent;" [value]="monthMax" readonly />
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

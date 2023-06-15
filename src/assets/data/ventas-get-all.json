@@ -1,0 +1,38 @@
+[
+    {
+        "CVenta": 1,
+        "CEmpleado": 123456,
+        "DFecha": "2020-01-22T00:00:00",
+        "MMonto": 100
+    },
+    {
+        "CVenta": 2,
+        "CEmpleado": 123457,
+        "DFecha": "2021-01-22T00:00:00",
+        "MMonto": 200
+    },
+    {
+        "CVenta": 3,
+        "CEmpleado": 123458,
+        "DFecha": "2021-03-22T00:00:00",
+        "MMonto": 300
+    },
+    {
+        "CVenta": 4,
+        "CEmpleado": 123459,
+        "DFecha": "2021-03-22T00:00:00",
+        "MMonto": 400
+    },
+    {
+        "CVenta": 5,
+        "CEmpleado": 1234560,
+        "DFecha": "2022-06-22T00:00:00",
+        "MMonto": 500
+    },
+    {
+        "CVenta": 6,
+        "CEmpleado": 1234561,
+        "DFecha": "2021-02-22T00:00:00",
+        "MMonto": 20
+    }
+]

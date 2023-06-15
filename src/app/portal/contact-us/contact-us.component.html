@@ -1,0 +1,34 @@
+<body style="background-color:rgb(99, 37, 126) ;">
+    <div class="container-fluid">
+
+        <div class="row ">
+            <div class="col-8">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    class="img-fluid img-thumbnail p-1 mb-2" alt="Responsive image" width="100px" alt="logo"
+                    style="background-color: transparent; border-color: transparent;">
+                <mat-card-title style="color:white">Jabonics</mat-card-title>
+            </div>
+
+            <div class="col-4">
+                <div class="d-flex justify-content-end p-4 mb-2">
+                    <button type="button" class="btn btn-danger" [routerLink]="['/','portal']" style="width: 70.38px; height: 38px">Volver</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="vertical-center_2" style="display: flex; justify-content: center;">
+            <form class="container-sm p-3 mb-2" style="background-color:#c0a0c3; border-radius: 20px;">
+                <h2 class="titulo">{{labelSave}}</h2>
+                <form action="" [formGroup]="contactusForm" class="form">
+                    <input class="input" type="text" name="" id="" placeholder="Nombre" style="border-radius: 20px;" formControlName="NUsuario">
+                    <input class="input" type="email" name="" id="" placeholder="Email" style="border-radius: 20px;" formControlName="TEmail">
+                    <textarea class="input" name="" id="" cols="30" rows="7" style="border-radius: 20px;" placeholder="Mensaje"
+                        formControlName="TMensaje"></textarea>
+                    <div class="p-3"style="display: flex; justify-content: center; gap: 10px;">
+                        <button type="submit" (click)="save()"mat-raised-button color="primary">Enviar</button>
+                    </div>
+                </form>
+            </form>
+        </div>
+    </div>
+</body>

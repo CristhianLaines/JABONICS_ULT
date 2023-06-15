@@ -1,0 +1,22 @@
+[
+    {
+        "CTipoProducto": 1,
+        "NTipoProducto": "Tipo de Producto 1"
+    },
+    {
+        "CTipoProducto": 2,
+        "NTipoProducto": "Tipo de Producto 2"
+    },
+    {
+        "CTipoProducto": 3,
+        "NTipoProducto": "Tipo de Producto 3"
+    },
+    {
+        "CTipoProducto": 4,
+        "NTipoProducto": "Tipo de Producto 4"
+    },
+    {
+        "CTipoProducto": 5,
+        "NTipoProducto": "Tipo de Producto 5"
+    }
+]

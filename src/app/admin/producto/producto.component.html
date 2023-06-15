@@ -1,0 +1,150 @@
+
+<body style="background-color: rgb(99, 37, 126); height:auto;">
+
+    <div class="container-fluid">
+
+        <div class="row ">
+          <div class="col-8">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+              class="img-fluid img-thumbnail p-1 mb-2" alt="Responsive image" width="100px" alt="logo"
+              style="background-color: transparent; border-color: transparent;">
+            <mat-card-title style="color:white">Jabonics</mat-card-title>
+          </div>
+
+          <div class="col-4">
+            <div class="d-flex justify-content-end p-3 mb-2">
+              <button type="button" class="btn btn-danger" [routerLink]="['/','admin']">Volver</button>
+            </div>
+          </div>
+        </div>
+
+    <div class="container-sm">
+
+        <div class="row">
+            <div class="col-sm">
+
+                <div class="vertical-center_1" style="display: flex; justify-content: center;">
+                    <div style="width: 600px;">
+                        <mat-form-field appearance="standard">
+                            <mat-label style="color:white">Buscar</mat-label>
+                            <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+                        </mat-form-field>
+                        <br />
+                        <table mat-table [dataSource]="dataSource" matSort
+                            style="width: 100%; background-color:#c0a0c3">
+                            <!-- <ng-container matColumnDef="nro" class="text-right">
+                <th mat-header-cell *matHeaderCellDef>N°</th>
+                <td mat-cell *matCellDef="let i = index">
+                    {{ i + 1 }}
+                </td>
+            </ng-container> -->
+                            <ng-container matColumnDef="codigo" class="text-right">
+                                <th mat-header-cell *matHeaderCellDef>Codigo</th>
+                                <td mat-cell *matCellDef="let element ">
+                                    {{ element.CProducto}}
+                                </td>
+                            </ng-container>
+                            <ng-container matColumnDef="nombre">
+                                <th mat-header-cell *matHeaderCellDef class="text-left">Nombre</th>
+                                <td class="text-left" mat-cell *matCellDef="let element">
+                                    {{ element.NProducto }}
+                                </td>
+                            </ng-container>
+                            <ng-container matColumnDef="tipoproducto">
+                                <th mat-header-cell *matHeaderCellDef class="text-left">Tipo Producto</th>
+                                <td class="text-left" mat-cell *matCellDef="let element">
+                                    {{ element.NTipoProducto }}
+                                </td>
+                            </ng-container>
+                            <ng-container matColumnDef="precio">
+                                <th mat-header-cell *matHeaderCellDef class="text-left">Precio</th>
+                                <td class="text-left" mat-cell *matCellDef="let element">
+                                    {{ element.MPrecio }}
+                                </td>
+                            </ng-container>
+                            <ng-container matColumnDef="editar">
+                                <th mat-header-cell *matHeaderCellDef>Editar</th>
+                                <td mat-cell *matCellDef="let element">
+                                    <button mat-icon-button (click)="edit(element)">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                </td>
+                            </ng-container>
+                            <ng-container matColumnDef="eliminar">
+                                <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+                                <td mat-cell *matCellDef="let element">
+                                    <button mat-icon-button (click)="delete(element.CProducto)">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+                            <tr class="mat-row" *matNoDataRow>
+                                <td class="mat-cell" [attr.colspan]="displayedColumns.length">
+                                    No se encuentra la información solicitada.
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+
+                <div class="vertical-center_2" style="display: flex; justify-content: center;">
+                    <form class="container-sm p-3 mb-2" style="background-color:#c0a0c3; border-radius: 20px;">
+
+                    <h1 style="color:rgb(13, 13, 13)">{{labelAddOrEdit}} producto</h1>
+                    <form [formGroup]="productoForm" (ngSubmit)="save()" style="display: flex; flex-direction: column;">
+
+                        <mat-form-field appearance="outline">
+                            <mat-label style="color:rgb(13, 13, 13)">Nombre Productoo:</mat-label>
+                            <input type="text" matInput placeholder="" formControlName="NProducto">
+                            <mat-error *ngIf="productoForm.get('NProducto').hasError('maxlength')">
+                              Nombre incorrecto por favor vuelva a ingresar
+                            </mat-error>
+                            <mat-error *ngIf="productoForm.get('NProducto').hasError('pattern')">
+                              Nombre incorrecto por favor vuelva a ingresar
+                            </mat-error>
+                            <mat-error *ngIf="NProductoError">{{NProductoError}}</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label style="color:rgb(13, 13, 13)">Tipo Producto:</mat-label>
+                            <mat-select formControlName="CTipoProducto">
+                                <mat-option style="background-color:#c0a0c3" *ngFor="let item of TipoProductoList"
+                                    [value]="item.CTipoProducto">
+                                    {{ item.NTipoProducto }}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="productoForm.get('CTipoProducto').invalid && productoForm.get('CTipoProducto').touched">
+                              Selección inválida por favor vuelva a ingresar
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label style="color:rgb(13, 13, 13)">Precio:</mat-label>
+                            <input type="text" min="1" matInput placeholder="" formControlName="MPrecio">
+                            <mat-error *ngIf="MPrecioError">{{MPrecioError}}</mat-error>
+                            <mat-error *ngIf="productoForm.get('MPrecio').invalid && productoForm.get('MPrecio').touched">
+                              Precio del producto inválido, por favor vuelva a ingresar
+                            </mat-error>
+                        </mat-form-field>
+
+                        <div style="display: flex; justify-content: center; gap: 10px;">
+                            <button type="submit" mat-raised-button color="primary">Guardar</button>
+
+                            <button type="button" (click)="clear()" mat-raised-button>Limpiar</button>
+                        </div>
+                    </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>

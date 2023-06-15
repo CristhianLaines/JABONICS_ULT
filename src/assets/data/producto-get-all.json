@@ -1,0 +1,37 @@
+[
+    {
+        "CProducto": 1,
+        "NProducto": "Producto 1",
+        "CTipoProducto": 1,
+        "NTipoProducto": "Tipo de Producto 1",
+        "MPrecio": 20
+    },
+    {
+        "CProducto": 2,
+        "NProducto": "Producto 2",
+        "CTipoProducto": 1,
+        "NTipoProducto": "Tipo de Producto 1",
+        "MPrecio": 31
+    },
+    {
+        "CProducto": 3,
+        "NProducto": "Producto 3",
+        "CTipoProducto": 2,
+        "NTipoProducto": "Tipo de Producto 2",
+        "MPrecio": 40.5
+    },
+    {
+        "CProducto": 4,
+        "NProducto": "Producto 4",
+        "CTipoProducto": 2,
+        "NTipoProducto": "Tipo de Producto 2",
+        "MPrecio": 450
+    },
+    {
+        "CProducto": 5,
+        "NProducto": "Producto 5",
+        "CTipoProducto": 3,
+        "NTipoProducto": "Tipo de Producto 3",
+        "MPrecio": 60
+    }
+]

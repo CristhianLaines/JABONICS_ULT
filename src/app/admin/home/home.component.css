@@ -1,0 +1,70 @@
+.contenedor {
+  background-image: url("/assets/images/HOME_4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #5f37b3;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  border-radius: 20%;
+  margin: 0px;
+  background-color: rgb(20, 136, 236);
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.logo {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+}
+.log img {
+  /* background-image: url("/assets/images/LOGO-JABONICS.png"); */
+  width: 30%;
+}
+
+.contactenos {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+.contactenos img {
+  height: 300px;
+  align-items: center;
+}
+
+.menus {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons {
+  background-color: #6200ee;
+  color: white;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10%;
+  height: 45px;
+}
+.contenedor-title {
+    padding-top: 15px;
+}
+
+
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+

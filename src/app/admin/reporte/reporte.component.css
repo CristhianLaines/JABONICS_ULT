@@ -1,0 +1,54 @@
+.rpt {
+  border-radius: 20%;
+  margin: 10px;
+  background-color: rgb(20, 136, 236);
+  color: black;
+  text-align: center;
+  padding: 10px 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+.anno {
+  border-radius: 20%;
+  margin: 10px;
+  background-color: rgb(178, 211, 57);
+  color: black;
+  text-align: center;
+  padding: 10px 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+.vtn {
+  border-radius: 20%;
+  margin: 10px;
+  background-color: rgb(211, 144, 57);
+  color: black;
+  text-align: center;
+  padding: 10px 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+.mvt {
+  border-radius: 20%;
+  margin: 10px;
+  background-color: rgb(61, 233, 204);
+  color: black;
+  text-align: center;
+  padding: 10px 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+.vertical-center_1 {
+  min-height: 100%;
+  min-height: 89.2vh;
+  display: flex;
+  align-items: center;
+}
+
+.vertical-center_2 {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.mat-table {
+  border-radius: 20px;
+  overflow: hidden !important;
+}

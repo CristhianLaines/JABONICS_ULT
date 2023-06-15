@@ -1,0 +1,79 @@
+<section class="h-100 gradient-form" style="background-color: rgb(99, 37, 126);">
+  <div class="container-fluid">
+
+    <div class="row ">
+      <div class="col-8">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+          class="img-fluid img-thumbnail p-1 mb-2" alt="Responsive image" width="100px" alt="logo"
+          style="background-color: transparent; border-color: transparent;">
+        <mat-card-title style="color:white">Jabonics</mat-card-title>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex justify-content-end p-3 mb-2">
+          <button type="button" class="btn btn-danger" [routerLink]="['/','portal']">Volver</button>
+        </div>
+      </div>
+    </div>
+
+  <form [formGroup]="form" (ngSubmit)="signIn()" class="vertical-center">
+
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+
+                  <div class="text-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                      style="width: 185px;" alt="logo">
+                    <mat-card-title>Bienvenido a Jabonics</mat-card-title>
+
+                  </div>
+
+                  <mat-card class="signin__card">
+                    <mat-card-content>
+                      <p>
+                        <mat-form-field appearance="legacy" class="yts_width_full">
+                          <mat-label>Usuario</mat-label>
+                          <input matInput type="text" placeholder="Usuario" formControlName="username"
+                            autocomplete="off">
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-form-field appearance="legacy" class="yts_width_full">
+                          <mat-label>Contraseña</mat-label>
+                          <input matInput type="password" placeholder="Contraseña" formControlName="password"
+                            autocomplete="off">
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-checkbox class="" formControlName="rememberme">Recuérdame</mat-checkbox>
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" mat-raised-button
+                        type="submit" [disabled]="formValid">
+                        Iniciar sesión
+                      </button>
+                    </mat-card-actions>
+                  </mat-card>
+
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">Somos más que una tienda de jabones</h4>
+                  <p class="small mb-0">"Descripción de Jabonics"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+</section>

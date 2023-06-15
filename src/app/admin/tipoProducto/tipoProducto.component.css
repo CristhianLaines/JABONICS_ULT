@@ -1,0 +1,18 @@
+.vertical-center_1 {
+    min-height: 100%;
+    min-height: 89.2vh;
+    display: flex;
+    align-items: center;
+}
+
+.vertical-center_2 {
+    min-height: 100%;
+    min-height: 82.2vh;
+    display: flex;
+    align-items: center;
+}
+
+.mat-table {
+    border-radius: 20px;
+    overflow: hidden !important;
+}
